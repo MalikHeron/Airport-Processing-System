@@ -7,7 +7,7 @@ public class Customer {
     private int flightNo;
     private int priorityNo;
 
-    //
+    //Default Constructor
     public Customer() {
         Id = 0;
         fName = "";
@@ -17,6 +17,7 @@ public class Customer {
         priorityNo = 0;
     }
 
+    //Primary Constructor
     public Customer(int Id, String fName, String lName, String gender, int flightNo, int priorityNo) {
         this.Id = Id;
         this.fName = fName;
@@ -31,11 +32,11 @@ public class Customer {
         return Id;
     }
 
-    public String getfName() {
+    public String getFName() {
         return fName;
     }
 
-    public String getlName() {
+    public String getLName() {
         return lName;
     }
 
@@ -56,11 +57,11 @@ public class Customer {
         Id = id;
     }
 
-    public void setfName(String fName) {
+    public void setFName(String fName) {
         this.fName = fName;
     }
 
-    public void setlName(String lName) {
+    public void setLName(String lName) {
         this.lName = lName;
     }
 
@@ -74,5 +75,13 @@ public class Customer {
 
     public void setPriorityNo(int priorityNo) {
         this.priorityNo = priorityNo;
+    }
+
+    public String toString() {
+        return "["+ Id+
+                ", "+ fName+ " "+ lName+
+                ", "+ gender+
+                ", "+ flightNo+
+                ", "+ priorityNo+ "]";
     }
 }

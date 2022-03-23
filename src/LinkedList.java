@@ -1,4 +1,5 @@
 public class LinkedList {
+<<<<<<< HEAD
     Node head; // head of list
 
     // Linked list Node
@@ -99,4 +100,6 @@ public class LinkedList {
             currNode = currNode.next;
         }
     }
+=======
+>>>>>>> 46a2ec93a03138fa00296cd9171959bcc19852d4
 }

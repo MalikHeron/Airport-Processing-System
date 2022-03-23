@@ -1,17 +1,5 @@
 public class LinkedList {
-<<<<<<< HEAD
     Node head; // head of list
-
-    // Linked list Node
-    static class Node {
-        Customer data;
-        Node next;
-
-        Node(Customer d) {
-            data = d;
-            next = null;
-        }
-    }
 
     // Method to insert a new node
     public void insert(Customer data)
@@ -100,6 +88,4 @@ public class LinkedList {
             currNode = currNode.next;
         }
     }
-=======
->>>>>>> 46a2ec93a03138fa00296cd9171959bcc19852d4
 }

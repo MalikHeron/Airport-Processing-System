@@ -12,7 +12,7 @@ public class UI {
     public static final String WHITE = "\033[0;37m"; // WHITE
 
     public static void titleCard() {
-        System.out.println(BLUE + "\n NMIA");
+        System.out.println(BLUE + "\n Normal Manley International Airport");
         resetColor();
     }
 

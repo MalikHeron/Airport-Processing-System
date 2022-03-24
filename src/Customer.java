@@ -7,7 +7,7 @@ public class Customer {
     private int flightNo;
     private int priorityNo;
 
-    //Default Constructor
+    // Default Constructor
     public Customer() {
         Id = 0;
         fName = "";
@@ -17,7 +17,7 @@ public class Customer {
         priorityNo = 0;
     }
 
-    //Primary Constructor
+    // Primary Constructor
     public Customer(int Id, String fName, String lName, String gender, int flightNo, int priorityNo) {
         this.Id = Id;
         this.fName = fName;
@@ -27,12 +27,11 @@ public class Customer {
         this.priorityNo = priorityNo;
     }
 
-    //Getters
+    // Getters and Setters
     public int getId() {
         return Id;
     }
 
-    //Setters
     public void setId(int id) {
         Id = id;
     }
@@ -77,6 +76,7 @@ public class Customer {
         this.priorityNo = priorityNo;
     }
 
+    // Overriding toString
     public String toString() {
         return "[" + Id +
                 ", " + fName + " " + lName +

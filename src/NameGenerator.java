@@ -70,7 +70,7 @@ public class NameGenerator {
         return gender = GENDER[random.nextInt(GENDER.length)];
     }
 
-    //Getter
+    // Getter
     public static String getGender() {
         return gender;
     }

@@ -17,10 +17,12 @@ public class Main {
         System.out.println(cus1);
         System.out.println(cus2);
         System.out.println(cus3);
+        System.out.println();
 
         customerlList.insert(cus1);
         customerlList.insert(cus2);
         customerlList.insert(cus3);
+        System.out.println();
 
         customerlList.print();
         customerlList.removeById(22);

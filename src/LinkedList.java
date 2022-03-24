@@ -23,7 +23,7 @@ public class LinkedList {
             last.next = new_node;
         }
 
-        System.out.println("inserted");
+        System.out.println("Customer with ID# " + data.getId() + " inserted.");
     }
 
     // Method to delete a Customer from the LinkedList by ID
@@ -33,11 +33,10 @@ public class LinkedList {
         Node prev = null;
 
         // If head node itself holds the key to be deleted
-
         if (currNode != null && currNode.data.getId() == searchID) {
             this.head = currNode.next; // Change the head
 
-            System.out.println(searchID + " deleted");
+            System.out.println("Customer with ID# " + searchID + " deleted.");
             return; // exit the function
         }
 
@@ -55,13 +54,14 @@ public class LinkedList {
             // Unlink currNode from linked list
             assert prev != null;
             prev.next = currNode.next;
-            System.out.println(searchID + " deleted");
+            System.out.println("Customer with ID# " + searchID + " deleted.");
         }
 
         // If key was not present in linked list
         if (currNode == null)
-            System.out.println(searchID + " not found");
+            System.out.println("Customer with ID# " + searchID + " not found.");
 
+        System.out.println();
     }
 
     // Method to print the LinkedList.
@@ -81,5 +81,7 @@ public class LinkedList {
             // Go to next node
             currNode = currNode.next;
         }
+
+        System.out.println();
     }
 }

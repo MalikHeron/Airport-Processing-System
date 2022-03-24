@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class UI {
     public static final String RESET = "\033[0m";  // Text Reset
 
@@ -12,8 +14,20 @@ public class UI {
     public static final String WHITE = "\033[0;37m"; // WHITE
     
     public static void titleCard() {
-        System.out.println(BLUE + "\n NMIA");
+        System.out.println("\n ______");
+        System.out.println("\n| ____ | || || || || //\\\\");
+        System.out.println("\n||    || || || || || //=\\\\");
+        System.out.println("\n||    || || || || || //\\\\");
+        System.out.println("\n||    || || || || || //\\\\");
         resetColor();
+
+        try {
+            TimeUnit.SECONDS.sleep(8);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // clearScreen();
     }
     
     public static void resetColor() {

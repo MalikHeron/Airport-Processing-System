@@ -24,11 +24,12 @@ public class UI {
         resetColor();
         System.out.println("Flight Arrival Processing\n\n");
 
+        /*
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         clearScreen();
     }

@@ -5,14 +5,14 @@ public class Main {
         UI.clearScreen(); // clear the screen
         UI.titleCard(); // show a title card
 
-        Customer cus1 = new Customer(20, NameGenerator.getFirstName(), NameGenerator.getLastName(),
-                NameGenerator.getGender(), 1001, 1);
+        Customer cus1 = new Customer(Generator.generateId(), Generator.getFirstName(), Generator.getLastName(),
+                Generator.getGender(), Generator.generateFlightNo(), Generator.generatePriority());
 
-        Customer cus2 = new Customer(22, NameGenerator.getFirstName(), NameGenerator.getLastName(),
-                NameGenerator.getGender(), 1101, 2);
+        Customer cus2 = new Customer(Generator.generateId(), Generator.getFirstName(), Generator.getLastName(),
+                Generator.getGender(), Generator.generateFlightNo(), Generator.generatePriority());
 
-        Customer cus3 = new Customer(25, NameGenerator.getFirstName(), NameGenerator.getLastName(),
-                NameGenerator.getGender(), 1011, 2);
+        Customer cus3 = new Customer(Generator.generateId(), Generator.getFirstName(), Generator.getLastName(),
+                Generator.getGender(), Generator.generateFlightNo(), Generator.generatePriority());
 
         System.out.println(cus1);
         System.out.println(cus2);

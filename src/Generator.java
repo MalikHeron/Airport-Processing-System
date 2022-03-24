@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class NameGenerator {
+public class Generator {
     private static final String[] MALE_NAMES = {
             "Liam",
             "Noah",
@@ -70,7 +70,22 @@ public class NameGenerator {
         return gender = GENDER[random.nextInt(GENDER.length)];
     }
 
-    // Getter
+    // Generates a Priority
+    public static int generatePriority() {
+        return (int) (Math.random() * (2 - 1 + 1) + 1);
+    }
+
+    // Generates a Flight Number
+    public static int generateFlightNo() {
+        return (int) (Math.random() * (1000 - 1 + 1) + 1);
+    }
+
+    // Generates an Id
+    public static int generateId() {
+        return (int) (Math.random() * (1000 - 1 + 1) + 1);
+    }
+
+    // Getters
     public static String getGender() {
         return gender;
     }

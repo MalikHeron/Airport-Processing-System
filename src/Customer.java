@@ -1,6 +1,6 @@
 public class Customer {
 
-    private int Id;
+    private int id;
     private String fName;
     private String lName;
     private String gender;
@@ -9,7 +9,7 @@ public class Customer {
 
     // Default Constructor
     public Customer() {
-        Id = 0;
+        id = 0;
         fName = "";
         lName = "";
         gender = "";
@@ -19,7 +19,7 @@ public class Customer {
 
     // Primary Constructor
     public Customer(int Id, String fName, String lName, String gender, int flightNo, int priorityNo) {
-        this.Id = Id;
+        this.id = Id;
         this.fName = fName;
         this.lName = lName;
         this.gender = gender;
@@ -29,11 +29,11 @@ public class Customer {
 
     // Getters and Setters
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFName() {
@@ -78,7 +78,7 @@ public class Customer {
 
     // Overriding toString
     public String toString() {
-        return "[" + Id +
+        return "[" + id +
                 ", " + fName + " " + lName +
                 ", " + gender +
                 ", " + flightNo +

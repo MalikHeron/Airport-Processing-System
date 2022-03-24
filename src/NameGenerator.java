@@ -1,7 +1,9 @@
 import java.util.Random;
 
 public class NameGenerator {
-    private static String[] MALE_NAMES = {
+    private static String gender;
+
+    private static final String[] MALE_NAMES = {
             "Liam",
             "Noah",
             "Oliver",
@@ -16,7 +18,7 @@ public class NameGenerator {
             "Michael",
     };
 
-    private static String[] FEMALE_NAMES = {
+    private static final String[] FEMALE_NAMES = {
         "Emma",
         "Ava",
         "Charlotte",
@@ -31,7 +33,7 @@ public class NameGenerator {
         "Abigail",
     };
 
-    private static String[] LAST_NAMES = {
+    private static final String[] LAST_NAMES = {
         "Smith",
         "Johnson",
         "Williams",
@@ -46,21 +48,34 @@ public class NameGenerator {
         "Lopez",
     };
 
-    // generates a first name
-    public static String getFirstName(String gender) {
+    private static final String[] GENDER = {"Female", "Male"};
+
+    // Generates a first name
+    public static String getFirstName() {
         Random random = new Random();
 
-        if (gender.equals("Female"))
+        if (generateGender().equals("Female"))
             return FEMALE_NAMES[random.nextInt(FEMALE_NAMES.length - 1)];
         else
             return MALE_NAMES[random.nextInt(MALE_NAMES.length - 1)];
     }
 
-    // generates a last name
+    // Generates a last name
     public static String getLastName() {
         Random random = new Random();
 
         return LAST_NAMES[random.nextInt(LAST_NAMES.length - 1)];
     }
-    
+
+    // Generates a gender
+    private static String generateGender() {
+        Random random = new Random();
+
+        return gender = GENDER[random.nextInt(GENDER.length)];
+    }
+
+    //Getter
+    public static String getGender() {
+        return gender;
+    }
 }

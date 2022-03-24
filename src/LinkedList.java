@@ -56,6 +56,7 @@ public class LinkedList {
         if (currNode != null) {
             // Since the key is at currNode
             // Unlink currNode from linked list
+            assert prev != null;
             prev.next = currNode.next;
             System.out.println(searchID + " deleted");
         }
@@ -74,14 +75,11 @@ public class LinkedList {
 
         // Traverse the LinkedList
         while (currNode != null) {
-            System.out.printf(
-                    "[ID: %i \nName: %s %s \nGender: %s \nFlight No.: %i \nPriority: %i] \n",
-                    currNode.data.getId(),
-                    currNode.data.getFName(),
-                    currNode.data.getLName(),
-                    currNode.data.getGender(),
-                    currNode.data.getFlightNo(),
-                    currNode.data.getPriorityNo()
+            System.out.println("["+ currNode.data.getId()+
+                    ", "+ currNode.data.getFName()+ " "+ currNode.data.getLName()+
+                    ", "+ currNode.data.getGender()+
+                    ", "+ currNode.data.getFlightNo()+
+                    ", "+ currNode.data.getPriorityNo()+ "]"
             );
 
             // Go to next node

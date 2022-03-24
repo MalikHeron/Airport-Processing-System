@@ -2,8 +2,7 @@ public class LinkedList {
     Node head; // head of list
 
     // Method to insert a new node
-    public void insert(Customer data)
-    {
+    public void insert(Customer data) {
         // Create a new node with given data
         Node new_node = new Node(data);
         new_node.next = null;
@@ -12,8 +11,7 @@ public class LinkedList {
         // then make the new node as head
         if (this.head == null) {
             this.head = new_node;
-        }
-        else {
+        } else {
             // Else traverse till the last node and insert the new_node there
             Node last = this.head;
 
@@ -29,8 +27,7 @@ public class LinkedList {
     }
 
     // Method to delete a Customer from the LinkedList by ID
-    public void removeById(int searchID)
-    {
+    public void removeById(int searchID) {
         // Store head node
         Node currNode = this.head;
         Node prev = null;
@@ -68,18 +65,17 @@ public class LinkedList {
     }
 
     // Method to print the LinkedList.
-    public void print()
-    {
+    public void print() {
         Node currNode = this.head;
         System.out.print("Customers: \n");
 
         // Traverse the LinkedList
         while (currNode != null) {
-            System.out.println("["+ currNode.data.getId()+
-                    ", "+ currNode.data.getFName()+ " "+ currNode.data.getLName()+
-                    ", "+ currNode.data.getGender()+
-                    ", "+ currNode.data.getFlightNo()+
-                    ", "+ currNode.data.getPriorityNo()+ "]"
+            System.out.println("[" + currNode.data.getId() +
+                    ", " + currNode.data.getFName() + " " + currNode.data.getLName() +
+                    ", " + currNode.data.getGender() +
+                    ", " + currNode.data.getFlightNo() +
+                    ", " + currNode.data.getPriorityNo() + "]"
             );
 
             // Go to next node

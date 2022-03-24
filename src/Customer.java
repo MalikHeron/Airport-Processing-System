@@ -32,45 +32,45 @@ public class Customer {
         return Id;
     }
 
-    public String getFName() {
-        return fName;
-    }
-
-    public String getLName() {
-        return lName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public int getFlightNo() {
-        return flightNo;
-    }
-
-    public int getPriorityNo() {
-        return priorityNo;
-    }
-
     //Setters
     public void setId(int id) {
         Id = id;
+    }
+
+    public String getFName() {
+        return fName;
     }
 
     public void setFName(String fName) {
         this.fName = fName;
     }
 
+    public String getLName() {
+        return lName;
+    }
+
     public void setLName(String lName) {
         this.lName = lName;
+    }
+
+    public String getGender() {
+        return gender;
     }
 
     public void setGender(String gender) {
         this.gender = gender;
     }
 
+    public int getFlightNo() {
+        return flightNo;
+    }
+
     public void setFlightNo(int flightNo) {
         this.flightNo = flightNo;
+    }
+
+    public int getPriorityNo() {
+        return priorityNo;
     }
 
     public void setPriorityNo(int priorityNo) {
@@ -78,10 +78,10 @@ public class Customer {
     }
 
     public String toString() {
-        return "["+ Id+
-                ", "+ fName+ " "+ lName+
-                ", "+ gender+
-                ", "+ flightNo+
-                ", "+ priorityNo+ "]";
+        return "[" + Id +
+                ", " + fName + " " + lName +
+                ", " + gender +
+                ", " + flightNo +
+                ", " + priorityNo + "]";
     }
 }

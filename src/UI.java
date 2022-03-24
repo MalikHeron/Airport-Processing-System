@@ -10,12 +10,12 @@ public class UI {
     public static final String PURPLE = "\033[0;35m";  // PURPLE
     public static final String CYAN = "\033[0;36m";    // CYAN
     public static final String WHITE = "\033[0;37m"; // WHITE
-    
+
     public static void titleCard() {
         System.out.println(BLUE + "\n NMIA");
         resetColor();
     }
-    
+
     public static void resetColor() {
         System.out.println(RESET);
     }

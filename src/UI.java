@@ -12,26 +12,29 @@ public class UI {
     public static final String PURPLE = "\033[0;35m";  // PURPLE
     public static final String CYAN = "\033[0;36m";    // CYAN
     public static final String WHITE = "\033[0;37m"; // WHITE
-    
+
     public static void titleCard() {
-        System.out.println("\n ______");
-        System.out.println("\n| ____ | || || || || //\\\\");
-        System.out.println("\n||    || || || || || //=\\\\");
-        System.out.println("\n||    || || || || || //\\\\");
-        System.out.println("\n||    || || || || || //\\\\");
+        System.out.println(CYAN);
+
+        System.out.println(" _____   ______      ____ ");
+        System.out.println("| ___ | | _  _ | || ||  ||");
+        System.out.println("||   || || || || || | -- |");
+        System.out.println("||   || ||    || || ||  ||");
+        System.out.println("||   || ||    || || ||  ||");
         resetColor();
+        System.out.println("Flight Arrival Processing\n\n");
 
         try {
-            TimeUnit.SECONDS.sleep(8);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // clearScreen();
+        clearScreen();
     }
-    
+
     public static void resetColor() {
-        System.out.println(RESET);
+        System.out.print(RESET);
     }
 
     public static void clearScreen() {

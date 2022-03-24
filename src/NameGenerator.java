@@ -1,8 +1,6 @@
 import java.util.Random;
 
 public class NameGenerator {
-    private static String gender;
-
     private static final String[] MALE_NAMES = {
             "Liam",
             "Noah",
@@ -17,38 +15,36 @@ public class NameGenerator {
             "Mason",
             "Michael",
     };
-
     private static final String[] FEMALE_NAMES = {
-        "Emma",
-        "Ava",
-        "Charlotte",
-        "Sophia",
-        "Amelia",
-        "Isabella",
-        "Mia",
-        "Evelyn",
-        "Harper",
-        "Camila",
-        "Gianna",
-        "Abigail",
+            "Emma",
+            "Ava",
+            "Charlotte",
+            "Sophia",
+            "Amelia",
+            "Isabella",
+            "Mia",
+            "Evelyn",
+            "Harper",
+            "Camila",
+            "Gianna",
+            "Abigail",
     };
-
     private static final String[] LAST_NAMES = {
-        "Smith",
-        "Johnson",
-        "Williams",
-        "Brown",
-        "Jones",
-        "Garcia",
-        "Miller",
-        "Davis",
-        "Rodriguez",
-        "Martinez",
-        "Hernandez",
-        "Lopez",
+            "Smith",
+            "Johnson",
+            "Williams",
+            "Brown",
+            "Jones",
+            "Garcia",
+            "Miller",
+            "Davis",
+            "Rodriguez",
+            "Martinez",
+            "Hernandez",
+            "Lopez",
     };
-
     private static final String[] GENDER = {"Female", "Male"};
+    private static String gender;
 
     // Generates a first name
     public static String getFirstName() {
@@ -74,7 +70,7 @@ public class NameGenerator {
         return gender = GENDER[random.nextInt(GENDER.length)];
     }
 
-    //Getter
+    // Getter
     public static String getGender() {
         return gender;
     }

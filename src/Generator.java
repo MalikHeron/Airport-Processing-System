@@ -72,17 +72,24 @@ public class Generator {
 
     // Generates a Priority
     public static int generatePriority() {
-        return (int) (Math.random() * (2 - 1 + 1) + 1);
+        return (int) (Math.random() * (2) + 1);
     }
 
     // Generates a Flight Number
     public static int generateFlightNo() {
-        return (int) (Math.random() * (1000 - 1 + 1) + 1);
+        return (int) (Math.random() * (1000) + 1);
     }
 
     // Generates an Id
     public static int generateId() {
-        return (int) (Math.random() * (1000 - 1 + 1) + 1);
+        return (int) (Math.random() * (1000) + 1);
+    }
+
+    // Generates a time
+    public static int generateTime() {
+        Random random = new Random();
+
+        return random.nextInt(2);
     }
 
     // Getters

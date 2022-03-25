@@ -47,7 +47,7 @@ public class Generator {
     private static String gender;
 
     // Generates a first name
-    public static String getFirstName() {
+    private static String getFirstName() {
         Random random = new Random();
 
         if (generateGender().equals("Female"))
@@ -57,7 +57,7 @@ public class Generator {
     }
 
     // Generates a last name
-    public static String getLastName() {
+    private static String getLastName() {
         Random random = new Random();
 
         return LAST_NAMES[random.nextInt(LAST_NAMES.length - 1)];
@@ -71,25 +71,36 @@ public class Generator {
     }
 
     // Generates a Priority
-    public static int generatePriority() {
+    private static int generatePriority() {
         return (int) (Math.random() * (2) + 1);
     }
 
     // Generates a Flight Number
-    public static int generateFlightNo() {
+    private static int generateFlightNo() {
         return (int) (Math.random() * (1000) + 1);
     }
 
     // Generates an Id
-    public static int generateId() {
+    private static int generateId() {
         return (int) (Math.random() * (1000) + 1);
     }
 
-    // Generates a time
-    public static int generateTime() {
-        Random random = new Random();
+    // Generates a list of customers
+    public static LinkedList generateCustomers() {
+        LinkedList customerList = new LinkedList();
 
-        return random.nextInt(3);
+        for (int time = 0; time <= 2; time++) {
+            System.out.println("Arrivals at t = " + time);
+
+            for (int i = 0; i < (int) (Math.random() * (6) + 1); i++) {
+                customerList.insert(new Customer(generateId(), getFirstName(), getLastName(),
+                        getGender(), generateFlightNo(), generatePriority(), time));
+            }
+
+            System.out.println();
+        }
+
+        return customerList;
     }
 
     // Getters

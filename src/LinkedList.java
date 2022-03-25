@@ -128,7 +128,7 @@ public class LinkedList {
                     ", " + currNode.data.getFName() + " " + currNode.data.getLName() +
                     ", " + currNode.data.getGender() +
                     ", " + currNode.data.getFlightNo() +
-                    ", " + currNode.data.getPriorityNo() + "] Time: "+ currNode.data.getTime()
+                    ", " + currNode.data.getPriorityNo() + "] Time: " + currNode.data.getTime()
             );
 
             // Go to next node

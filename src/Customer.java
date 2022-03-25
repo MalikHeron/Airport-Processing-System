@@ -8,17 +8,6 @@ public class Customer {
     private final int priorityNo;
     private final int time;
 
-    // Default Constructor
-    public Customer() {
-        id = 0;
-        fName = "";
-        lName = "";
-        gender = "";
-        flightNo = 0;
-        priorityNo = 0;
-        time = 0;
-    }
-
     // Primary Constructor
     public Customer(int Id, String fName, String lName, String gender, int flightNo, int priorityNo, int time) {
         this.id = Id;
@@ -55,7 +44,7 @@ public class Customer {
         return priorityNo;
     }
 
-    public int getTime(){
+    public int getTime() {
         return time;
     }
 
@@ -65,6 +54,6 @@ public class Customer {
                 ", " + fName + " " + lName +
                 ", " + gender +
                 ", " + flightNo +
-                ", " + priorityNo + "]";
+                ", " + priorityNo + "] Time: " + time;
     }
 }

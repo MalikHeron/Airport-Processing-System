@@ -100,6 +100,9 @@ public class Generator {
             System.out.println();
         }
 
+        System.out.println("Sorting...");
+        Sorting.sortByPriority(customerList);
+
         return customerList;
     }
 

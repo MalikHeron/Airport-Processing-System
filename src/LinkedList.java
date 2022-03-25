@@ -69,19 +69,21 @@ public class LinkedList {
         Node currNode = this.head;
         System.out.print("Customers: \n");
 
-        // Traverse the LinkedList
-        while (currNode != null) {
-            System.out.println("[" + currNode.data.getId() +
-                    ", " + currNode.data.getFName() + " " + currNode.data.getLName() +
-                    ", " + currNode.data.getGender() +
-                    ", " + currNode.data.getFlightNo() +
-                    ", " + currNode.data.getPriorityNo() + "] Time: " + currNode.data.getTime()
-            );
+        for(int time = 0; time <= 2; time++) {
+            System.out.println("Arrivals at t = " + time);
+            // Traverse the LinkedList
+            while (currNode != null && currNode.data.getTime() == time) {
+                System.out.println("[" + currNode.data.getId() +
+                        ", " + currNode.data.getFName() + " " + currNode.data.getLName() +
+                        ", " + currNode.data.getGender() +
+                        ", " + currNode.data.getFlightNo() +
+                        ", " + currNode.data.getPriorityNo() + "]"
+                );
 
-            // Go to next node
-            currNode = currNode.next;
+                // Go to next node
+                currNode = currNode.next;
+            }
+            System.out.println();
         }
-
-        System.out.println();
     }
 }

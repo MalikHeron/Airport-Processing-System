@@ -51,16 +51,16 @@ public class Generator {
         Random random = new Random();
 
         if (generateGender().equals("Female"))
-            return FEMALE_NAMES[random.nextInt(FEMALE_NAMES.length - 1)];
+            return FEMALE_NAMES[random.nextInt(FEMALE_NAMES.length)];
         else
-            return MALE_NAMES[random.nextInt(MALE_NAMES.length - 1)];
+            return MALE_NAMES[random.nextInt(MALE_NAMES.length)];
     }
 
     // Generates a last name
     private static String getLastName() {
         Random random = new Random();
 
-        return LAST_NAMES[random.nextInt(LAST_NAMES.length - 1)];
+        return LAST_NAMES[random.nextInt(LAST_NAMES.length)];
     }
 
     // Generates a gender

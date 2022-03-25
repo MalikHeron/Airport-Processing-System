@@ -15,13 +15,13 @@ public class UI {
     public static void titleCard() {
         System.out.println(CYAN);
 
-        System.out.println(" _____   ______      ____ ");
-        System.out.println("| ___ | | _  _ | || ||  ||");
-        System.out.println("||   || || || || || | -- |");
-        System.out.println("||   || ||    || || ||  ||");
-        System.out.println("||   || ||    || || ||  ||");
+        System.out.println("███    ██ ███    ███ ██  █████  ");
+        System.out.println("████   ██ ████  ████ ██ ██   ██ ");
+        System.out.println("██ ██  ██ ██ ████ ██ ██ ███████ ");
+        System.out.println("██  ██ ██ ██  ██  ██ ██ ██   ██ ");
+        System.out.println("██   ████ ██      ██ ██ ██   ██ ");
         resetColor();
-        System.out.println("Flight Arrival Processing\n\n");
+        System.out.println("Flight Arrival Processing System\n\n");
         
         pressEnterToContinue();
         clearScreen();

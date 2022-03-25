@@ -2,6 +2,7 @@ class Node {
     private Customer data;
     private Node nextNode;
 
+    // Primary Constructor
     public Node(Customer data) {
         this.data = data;
         this.nextNode = null;

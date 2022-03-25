@@ -4,24 +4,24 @@ public class Report {
     private static final int[][] femaleCounter = new int[3][3];
 
     public static void generateReport(LinkedList customerList) {
-        Node currNode = customerList.head;
+        Node currentNode = customerList.head;
 
         if (customerList.head != null) {
-            while (currNode != null) {
+            while (currentNode != null) {
                 // Check gender of customer
-                if (currNode.getData().getGender().equals("Male")) {
+                if (currentNode.getData().getGender().equals("Male")) {
                     // Increase male count by 1 for respective level and time
-                    maleCounter[currNode.getData().getPriorityNo()][currNode.getData().getTime()]++;
+                    maleCounter[currentNode.getData().getPriorityNo()][currentNode.getData().getTime()]++;
                 } else {
                     // Increase female count by 1 for respective level and time
-                    femaleCounter[currNode.getData().getPriorityNo()][currNode.getData().getTime()]++;
+                    femaleCounter[currentNode.getData().getPriorityNo()][currentNode.getData().getTime()]++;
                 }
                 // Go to next node
-                currNode = currNode.getNextNode();
+                currentNode = currentNode.getNextNode();
             }
 
             System.out.println("Generating Report...\n");
-            // Display calculations for each level at each time
+            // Display data for each level at the respective times
             for (int level = 1; level <= 2; level++) {
                 System.out.println("Number of level " + level + " males on each flight");
 

@@ -24,11 +24,11 @@ public class Customer {
         return id;
     }
 
-    public String getFName() {
+    public String getFirstName() {
         return fName;
     }
 
-    public String getLName() {
+    public String getLastName() {
         return lName;
     }
 

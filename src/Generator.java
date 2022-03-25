@@ -45,11 +45,10 @@ public class Generator {
     };
     private static final String[] GENDER = {"Female", "Male"};
     private static String gender;
+    private static final Random random = new Random();
 
     // Generates a first name
-    private static String getFirstName() {
-        Random random = new Random();
-
+    private static String generateFirstName() {
         if (generateGender().equals("Female"))
             return FEMALE_NAMES[random.nextInt(FEMALE_NAMES.length)];
         else
@@ -57,16 +56,12 @@ public class Generator {
     }
 
     // Generates a last name
-    private static String getLastName() {
-        Random random = new Random();
-
+    private static String generateLastName() {
         return LAST_NAMES[random.nextInt(LAST_NAMES.length)];
     }
 
     // Generates a gender
     private static String generateGender() {
-        Random random = new Random();
-
         return gender = GENDER[random.nextInt(GENDER.length)];
     }
 
@@ -93,14 +88,13 @@ public class Generator {
 
             // Generate a random number of customers from 1 to 6
             for (int i = 0; i < (int) (Math.random() * (6) + 1); i++) {
-                customerList.insert(new Customer(generateId(), getFirstName(), getLastName(),
+                customerList.insert(new Customer(generateId(), generateFirstName(), generateLastName(),
                         getGender(), generateFlightNo(), generatePriority(), time));
             }
             System.out.println();
         }
         System.out.println("Sorting...\n");
-        Sorting.sortByPriority(customerList);
-        Sorting.sortByTime(customerList);
+        Sorting.sortList(customerList); // Sorts the list
     }
 
     // Getters

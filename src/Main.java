@@ -11,7 +11,9 @@ public class Main {
         }
 
         System.out.println();
-
+        
+        customerList.sortByPriority();
+        
         customerList.print();
         //customerList.removeById(22);
         //customerList.print();

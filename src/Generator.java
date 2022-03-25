@@ -92,6 +92,7 @@ public class Generator {
         for (int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);
 
+            // Generate a random number of customers from 1 to 6
             for (int i = 0; i < (int) (Math.random() * (6) + 1); i++) {
                 customerList.insert(new Customer(generateId(), getFirstName(), getLastName(),
                         getGender(), generateFlightNo(), generatePriority(), time));

@@ -34,19 +34,19 @@ public class Sorting {
         }
     }
 
-    public static void sortByTime(LinkedList customerList){
+    public static void sortByTime(LinkedList customerList) {
         Node currentNode = customerList.head;
         Customer customer;
 
-        if(customerList.head != null) {
-            while (currentNode != null){
+        if (customerList.head != null) {
+            while (currentNode != null) {
                 //Node index will point to node next to currentNode
                 Node nextNode = currentNode.getNextNode();
 
-                while (nextNode != null){
+                while (nextNode != null) {
                     //If current node data is greater than next node data,
                     //swap the data between them
-                    if(currentNode.getData().getTime() > nextNode.getData().getTime()){
+                    if (currentNode.getData().getTime() > nextNode.getData().getTime()) {
                         customer = currentNode.getData();
                         currentNode.setData(nextNode.getData());
                         nextNode.setData(customer);

@@ -44,8 +44,8 @@ public class Generator {
             "Lopez",
     };
     private static final String[] GENDER = {"Female", "Male"};
-    private static String gender;
     private static final Random random = new Random();
+    private static String gender;
 
     // Generates a first name
     private static String generateFirstName() {

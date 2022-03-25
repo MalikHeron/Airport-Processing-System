@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class UI {
     public static final String RESET = "\033[0m";  // Text Reset
@@ -25,15 +23,7 @@ public class UI {
         resetColor();
         System.out.println("Flight Arrival Processing\n\n");
         
-        System.out.println("Press any key to contiue...\n\n");
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        
-        try {
-            input.readLine();
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-
+        pressEnterToContinue();
         clearScreen();
     }
 
@@ -48,5 +38,14 @@ public class UI {
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    public static void pressEnterToContinue() {
+        System.out.println(GREEN);
+        System.out.println("<< Press Enter to continue >>");
+        resetColor();
+        try {
+            System.in.read();
+        } catch (Exception ignored) {}
     }
 }

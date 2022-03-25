@@ -40,7 +40,7 @@ public class Sorting {
 
         if (customerList.head != null) {
             while (currentNode != null) {
-                //Node index will point to node next to currentNode
+                // Initialize next node as node after current node
                 Node nextNode = currentNode.getNextNode();
 
                 while (nextNode != null) {

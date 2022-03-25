@@ -20,6 +20,8 @@ public class Report {
                 currentNode = currentNode.getNextNode();
             }
 
+            UI.pressEnterToContinue();
+            
             UI.changeColor(UI.GREEN);
             System.out.println("Generating Report...\n");
             UI.resetColor();

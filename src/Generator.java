@@ -98,9 +98,12 @@ public class Generator {
             System.out.println();
         }
 
+        UI.pressEnterToContinue();
+
         UI.changeColor(UI.YELLOW);
         System.out.println("Sorting...\n");
         UI.resetColor();
+        
         Sorting.sortList(customerList); // Sorts the list
     }
 

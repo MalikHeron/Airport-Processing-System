@@ -93,6 +93,7 @@ public class Generator {
             }
             System.out.println();
         }
+        UI.pressEnterToContinue();
         System.out.println("Sorting...\n");
         Sorting.sortList(customerList); // Sorts the list
     }

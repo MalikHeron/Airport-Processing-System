@@ -20,6 +20,7 @@ public class Report {
                 currentNode = currentNode.getNextNode();
             }
 
+            UI.pressEnterToContinue();
             System.out.println("Generating Report...\n");
             // Display data for each level at the respective times
             for (int level = 1; level <= 2; level++) {

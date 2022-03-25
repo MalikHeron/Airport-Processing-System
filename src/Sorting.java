@@ -1,29 +1,29 @@
 public class Sorting {
-/*
-    public Sorting() {
-        //Node current will point to head
-        Node current = head, index = null;
-        int temp;
+     public void sortByPriority(){
+	    	   Node currNode = this.head, index = null;
+	    	   Customer temp;
 
-        if(head == null) {
-            return;
-        }
-        else {
-            while(current != null) {
-                //Node index will point to node next to current
-                index = current.next;
+	    	   if(this.head == null)
+	    	       return;
+	    	   else {
+	    	       while (currNode != null){
+	    	           //Node index will point to node next to currNode
+	    	           index = currNode.next;
 
-                while(index != null) {
-                    //If current node's data(Priority level) is greater than index's node data(Priority level), swap the data between them
-                    if(current.data.getPriorityNo() > index.data.getPriorityNo()) {
-                        temp = current.data;
-                        current.data = index.data;
-                        index.data = temp;
-                    }
-                    index = index.next;
-                }
-                current = current.next;
-            }
-        }
-    }*/
+	    	           while (index != null){
+	    	               //If current node data is greater than index's node data,
+	    	               //swap the data between them
+	    	               if(currNode.data.getPriorityNo() > index.data.getPriorityNo()){
+	    	                   temp = currNode.data;
+	    	                   currNode.data = index.data;
+	    	                   index.data = temp;
+	    	               }
+
+	    	               index = index.next;
+	    	           }
+	    	           currNode = currNode.next;
+	    	       }
+	    	   }
+	    	}
+
 }

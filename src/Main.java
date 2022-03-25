@@ -13,6 +13,7 @@ public class Main {
         System.out.println();
         
         customerList.sortByPriority();
+        customerList.sortByTime();
         
         customerList.print();
         //customerList.removeById(22);

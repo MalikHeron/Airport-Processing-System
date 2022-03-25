@@ -6,7 +6,7 @@ public class Sorting {
 
         if (customerList.head != null) {
             while (currNode != null) {
-                // Node index will point to node next to currNode
+                // Initialize next node as node after current node
                 Node nextNode = currNode.next;
 
                 while (nextNode != null) {
@@ -20,9 +20,10 @@ public class Sorting {
                             nextNode.data = temp;
                         }
                     }
-
+                    // Change next node
                     nextNode = nextNode.next;
                 }
+                // Go to next node
                 currNode = currNode.next;
             }
         }

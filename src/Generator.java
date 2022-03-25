@@ -89,6 +89,7 @@ public class Generator {
     public static LinkedList generateCustomers() {
         LinkedList customerList = new LinkedList();
 
+        System.out.println("Generating Customers...\n");
         for (int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);
 
@@ -97,13 +98,10 @@ public class Generator {
                 customerList.insert(new Customer(generateId(), getFirstName(), getLastName(),
                         getGender(), generateFlightNo(), generatePriority(), time));
             }
-
             System.out.println();
         }
-
         System.out.println("Sorting...");
         Sorting.sortByPriority(customerList);
-
         return customerList;
     }
 

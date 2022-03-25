@@ -68,7 +68,7 @@ public class LinkedList {
     public void print() {
         Node currNode = this.head;
 
-        for(int time = 0; time <= 2; time++) {
+        for (int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);
             // Traverse the LinkedList
             while (currNode != null && currNode.data.getTime() == time) {

@@ -54,6 +54,6 @@ public class Customer {
                 ", " + fName + " " + lName +
                 ", " + gender +
                 ", " + flightNo +
-                ", " + priorityNo + "] Time: " + time;
+                ", " + priorityNo + "]";
     }
 }

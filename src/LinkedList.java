@@ -67,7 +67,6 @@ public class LinkedList {
     // Method to print the LinkedList.
     public void print() {
         Node currNode = this.head;
-        System.out.print("Customers: \n");
 
         for(int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);

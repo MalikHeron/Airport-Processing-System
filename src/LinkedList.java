@@ -5,7 +5,6 @@ public class LinkedList {
     public void insert(Customer data) {
         // Create a new node with given data
         Node new_node = new Node(data);
-        new_node.next = null;
 
         // If the Linked List is empty,
         // then make the new node as head
@@ -15,12 +14,12 @@ public class LinkedList {
             // Else traverse till the last node and insert the new_node there
             Node last = this.head;
 
-            while (last.next != null) {
-                last = last.next;
+            while (last.getNextNode() != null) {
+                last = last.getNextNode();
             }
 
             // Insert the new_node at last node
-            last.next = new_node;
+            last.setNextNode(new_node);
         }
 
         System.out.println("Customer with ID# " + data.getId() + " inserted.");
@@ -33,8 +32,8 @@ public class LinkedList {
         Node prev = null;
 
         // If head node itself holds the key to be deleted
-        if (currNode != null && currNode.data.getId() == searchID) {
-            this.head = currNode.next; // Change the head
+        if (currNode != null && currNode.getData().getId() == searchID) {
+            this.head = currNode.getNextNode(); // Change the head
 
             System.out.println("Customer with ID# " + searchID + " deleted.");
             return; // exit the function
@@ -42,9 +41,9 @@ public class LinkedList {
 
         // the ID is somewhere else in the list so search for it,
         // keep track of the previous node as it is needed to change currNode.next
-        while (currNode != null && !(currNode.data.getId() == searchID)) {
+        while (currNode != null && !(currNode.getData().getId() == searchID)) {
             prev = currNode;
-            currNode = currNode.next;
+            currNode = currNode.getNextNode();
         }
 
         // If the ID was present, it should be at currNode
@@ -53,7 +52,7 @@ public class LinkedList {
             // Since the key is at currNode
             // Unlink currNode from linked list
             assert prev != null;
-            prev.next = currNode.next;
+            prev.setNextNode(currNode.getNextNode());
             System.out.println("Customer with ID# " + searchID + " deleted.");
         }
 
@@ -71,16 +70,16 @@ public class LinkedList {
         for (int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);
             // Traverse the LinkedList
-            while (currNode != null && currNode.data.getTime() == time) {
-                System.out.println("[" + currNode.data.getId() +
-                        ", " + currNode.data.getFName() + " " + currNode.data.getLName() +
-                        ", " + currNode.data.getGender() +
-                        ", " + currNode.data.getFlightNo() +
-                        ", " + currNode.data.getPriorityNo() + "]"
+            while (currNode != null && currNode.getData().getTime() == time) {
+                System.out.println("[" + currNode.getData().getId() +
+                        ", " + currNode.getData().getFName() + " " + currNode.getData().getLName() +
+                        ", " + currNode.getData().getGender() +
+                        ", " + currNode.getData().getFlightNo() +
+                        ", " + currNode.getData().getPriorityNo() + "]"
                 );
 
                 // Go to next node
-                currNode = currNode.next;
+                currNode = currNode.getNextNode();
             }
             System.out.println();
         }

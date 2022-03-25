@@ -9,15 +9,15 @@ public class Report {
         if (customerList.head != null) {
             while (currNode != null) {
                 // Check gender of customer
-                if (currNode.data.getGender().equals("Male")) {
+                if (currNode.getData().getGender().equals("Male")) {
                     // Increase male count by 1 for respective level and time
-                    maleCounter[currNode.data.getPriorityNo()][currNode.data.getTime()]++;
+                    maleCounter[currNode.getData().getPriorityNo()][currNode.getData().getTime()]++;
                 } else {
                     // Increase female count by 1 for respective level and time
-                    femaleCounter[currNode.data.getPriorityNo()][currNode.data.getTime()]++;
+                    femaleCounter[currNode.getData().getPriorityNo()][currNode.getData().getTime()]++;
                 }
                 // Go to next node
-                currNode = currNode.next;
+                currNode = currNode.getNextNode();
             }
 
             System.out.println("Generating Report...\n");

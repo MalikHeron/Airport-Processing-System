@@ -86,9 +86,7 @@ public class Generator {
     }
 
     // Generates a list of customers
-    public static LinkedList generateCustomers() {
-        LinkedList customerList = new LinkedList();
-
+    public static void generateCustomers(LinkedList customerList) {
         System.out.println("Generating Customers...\n");
         for (int time = 0; time <= 2; time++) {
             System.out.println("Arrivals at t = " + time);
@@ -100,9 +98,9 @@ public class Generator {
             }
             System.out.println();
         }
-        System.out.println("Sorting...");
+        System.out.println("Sorting...\n");
         Sorting.sortByPriority(customerList);
-        return customerList;
+        Sorting.sortByTime(customerList);
     }
 
     // Getters

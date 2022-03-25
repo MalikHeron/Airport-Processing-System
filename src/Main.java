@@ -5,12 +5,18 @@ public class Main {
     public static void main(String[] args) {
         //UI.clearScreen(); // clear the screen
         //UI.titleCard(); // show a title card
-        customerList = Generator.generateCustomers(); // list of customers
-        System.out.println();
 
-        customerList.print();
-        Report.generateReport(customerList);
-        //customerList.removeById(22);
+        // First list of customers
+        Generator.generateCustomers(customerList);
+        customerList.print(); // Print list
+        Report.generateReport(customerList); // Generate Report
+
+        // Second list of customers
+        Generator.generateCustomers(customerList);
+        customerList.print(); // Print list
+        Report.generateReport(customerList); // Generate Report
+
+        //customerList.remove();
         //customerList.print();
     }
 }

@@ -68,7 +68,10 @@ public class LinkedList {
         Node currentNode = this.head;
 
         for (int time = 0; time <= 2; time++) {
+            UI.changeColor(UI.BLUE);
             System.out.println("Arrivals at t = " + time);
+            UI.resetColor();
+            
             // Traverse the LinkedList
             while (currentNode != null && currentNode.getData().getTime() == time) {
                 System.out.println(currentNode.getData());

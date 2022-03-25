@@ -82,9 +82,13 @@ public class Generator {
 
     // Generates a list of customers
     public static void generateCustomers(LinkedList customerList) {
+        UI.changeColor(UI.GREEN);
         System.out.println("Generating Customers...\n");
+
         for (int time = 0; time <= 2; time++) {
+            UI.changeColor(UI.BLUE);
             System.out.println("Arrivals at t = " + time);
+            UI.resetColor();
 
             // Generate a random number of customers from 1 to 6
             for (int i = 0; i < (int) (Math.random() * (6) + 1); i++) {
@@ -93,7 +97,10 @@ public class Generator {
             }
             System.out.println();
         }
+
+        UI.changeColor(UI.YELLOW);
         System.out.println("Sorting...\n");
+        UI.resetColor();
         Sorting.sortList(customerList); // Sorts the list
     }
 

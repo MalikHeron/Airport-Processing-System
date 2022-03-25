@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class UI {
     public static final String RESET = "\033[0m";  // Text Reset
 
@@ -21,19 +24,25 @@ public class UI {
         System.out.println("||   || ||    || || ||  ||");
         resetColor();
         System.out.println("Flight Arrival Processing\n\n");
-
-        /*
+        
+        System.out.println("Press any key to contiue...\n\n");
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        
         try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+            input.readLine();
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
 
         clearScreen();
     }
 
     public static void resetColor() {
         System.out.print(RESET);
+    }
+
+    public static void changeColor(String color) {
+        System.out.print(color);
     }
 
     public static void clearScreen() {

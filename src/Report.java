@@ -20,16 +20,23 @@ public class Report {
                 currentNode = currentNode.getNextNode();
             }
 
+            UI.changeColor(UI.GREEN);
             System.out.println("Generating Report...\n");
+            UI.resetColor();
+
             // Display data for each level at the respective times
             for (int level = 1; level <= 2; level++) {
+                UI.changeColor(UI.BLUE);
                 System.out.println("Number of level " + level + " males on each flight");
+                UI.resetColor();
 
                 for (int time = 0; time <= 2; time++) {
                     System.out.println("Time " + time + ": " + maleCounter[level][time]);
                 }
 
+                UI.changeColor(UI.BLUE);
                 System.out.println("\nNumber of level " + level + " females on each flight");
+                UI.resetColor();
 
                 for (int time = 0; time <= 2; time++) {
                     System.out.println("Time " + time + ": " + femaleCounter[level][time]);

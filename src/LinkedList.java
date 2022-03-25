@@ -71,13 +71,7 @@ public class LinkedList {
             System.out.println("Arrivals at t = " + time);
             // Traverse the LinkedList
             while (currentNode != null && currentNode.getData().getTime() == time) {
-                System.out.println("[" + currentNode.getData().getId() +
-                        ", " + currentNode.getData().getFirstName() + " " + currentNode.getData().getLastName() +
-                        ", " + currentNode.getData().getGender() +
-                        ", " + currentNode.getData().getFlightNo() +
-                        ", " + currentNode.getData().getPriorityNo() + "]"
-                );
-
+                System.out.println(currentNode.getData());
                 // Go to next node
                 currentNode = currentNode.getNextNode();
             }

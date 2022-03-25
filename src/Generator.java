@@ -89,7 +89,7 @@ public class Generator {
     public static int generateTime() {
         Random random = new Random();
 
-        return random.nextInt(2);
+        return random.nextInt(3);
     }
 
     // Getters

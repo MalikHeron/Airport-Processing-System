@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 
 public class UI {
     public static final String RESET = "\033[0m";  // Text Reset
@@ -22,7 +23,7 @@ public class UI {
         System.out.println("██   ████ ██      ██ ██ ██   ██ ");
         resetColor();
         System.out.println("Flight Arrival Processing System\n\n");
-        
+
         pressEnterToContinue();
         clearScreen();
     }
@@ -41,11 +42,21 @@ public class UI {
     }
 
     public static void pressEnterToContinue() {
-        System.out.println(GREEN);
+        System.out.println(PURPLE);
         System.out.println("<< Press Enter to continue >>");
         resetColor();
         try {
             System.in.read();
-        } catch (Exception ignored) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void sleep() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

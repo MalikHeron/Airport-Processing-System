@@ -9,8 +9,8 @@ public class Customer {
     private final int time;
 
     // Primary Constructor
-    public Customer(int Id, String fName, String lName, String gender, int flightNo, int priorityNo, int time) {
-        this.id = Id;
+    public Customer(int id, String fName, String lName, String gender, int flightNo, int priorityNo, int time) {
+        this.id = id;
         this.fName = fName;
         this.lName = lName;
         this.gender = gender;
@@ -50,10 +50,10 @@ public class Customer {
 
     // Overriding toString
     public String toString() {
-        return "[" + id +
-                ", " + fName + " " + lName +
-                ", " + gender +
-                ", " + flightNo +
-                ", " + priorityNo + "]";
+        return "[" + getId() +
+                ", " + getFirstName() + " " + getLastName() +
+                ", " + getGender() +
+                ", " + getFlightNo() +
+                ", " + getPriorityNo() + "]";
     }
 }

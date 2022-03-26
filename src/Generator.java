@@ -84,6 +84,7 @@ public class Generator {
     public static void generateCustomers(LinkedList customerList) {
         UI.changeColor(UI.GREEN);
         System.out.println("Generating Customers...\n");
+        UI.sleep();
 
         for (int time = 0; time <= 2; time++) {
             UI.changeColor(UI.BLUE);
@@ -98,12 +99,10 @@ public class Generator {
             System.out.println();
         }
 
-        UI.pressEnterToContinue();
-
         UI.changeColor(UI.YELLOW);
         System.out.println("Sorting...\n");
+        UI.sleep();
         UI.resetColor();
-        
         Sorting.sortList(customerList); // Sorts the list
     }
 

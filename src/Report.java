@@ -20,8 +20,10 @@ public class Report {
                 currentNode = currentNode.getNextNode();
             }
 
+            UI.pressEnterToContinue();
             UI.changeColor(UI.GREEN);
             System.out.println("Generating Report...\n");
+            UI.sleep();
             UI.resetColor();
 
             // Display data for each level at the respective times

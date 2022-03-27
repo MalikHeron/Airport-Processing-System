@@ -1,7 +1,9 @@
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class UI {
     public static final String RESET = "\033[0m";  // Text Reset
+    static Scanner pauser = new Scanner (System.in);
 
     // Regular Colors
     public static final String BLACK = "\033[0;30m";   // BLACK
@@ -22,9 +24,7 @@ public class UI {
         System.out.println("██  ██ ██ ██  ██  ██ ██ ██   ██ ");
         System.out.println("██   ████ ██      ██ ██ ██   ██ ");
         resetColor();
-        System.out.println("Flight Arrival Processing System\n\n");
-
-        pressEnterToContinue();
+        System.out.println("Flight Arrival Processing System\n");
         clearScreen();
     }
 
@@ -44,12 +44,8 @@ public class UI {
     public static void pressEnterToContinue() {
         System.out.println(PURPLE);
         System.out.println("<< Press Enter to continue >>");
+        pauser.nextLine();
         resetColor();
-        try {
-            System.in.read();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public static void sleep() {

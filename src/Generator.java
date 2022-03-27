@@ -82,6 +82,7 @@ public class Generator {
 
     // Generates a list of customers
     public static void generateCustomers(LinkedList customerList) {
+        UI.pressEnterToContinue();
         UI.changeColor(UI.GREEN);
         System.out.println("Generating Customers...\n");
         UI.sleep();
@@ -99,6 +100,7 @@ public class Generator {
             System.out.println();
         }
 
+        UI.pressEnterToContinue();
         UI.changeColor(UI.YELLOW);
         System.out.println("Sorting...\n");
         UI.sleep();

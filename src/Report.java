@@ -21,7 +21,7 @@ public class Report {
             }
 
             UI.pressEnterToContinue();
-            UI.changeColor(UI.GREEN);
+            UI.changeColor(UI.RED);
             System.out.println("Generating Report...\n");
             UI.sleep();
             UI.resetColor();

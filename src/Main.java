@@ -11,12 +11,12 @@ public class Main {
         customerList.print(); // Print list
         Report.generateReport(customerList); // Generate Report
 
-        // Second list of customers
+        /* Second list of customers
         Generator.generateCustomers(customerList);
         customerList.print(); // Print list
-        Report.generateReport(customerList); // Generate Report
+        Report.generateReport(customerList); // Generate Report*/
 
-        //customerList.remove();
-        //customerList.print();
+        customerList.remove();
+        customerList.print();
     }
 }

@@ -38,7 +38,7 @@ public class UI {
     }
 
     public static void pressEnterToContinue() {
-        Scanner pause = new Scanner (System.in);
+        Scanner pause = new Scanner(System.in);
         System.out.println(PURPLE);
         System.out.println("<< Press Enter to continue >>");
         pause.nextLine();

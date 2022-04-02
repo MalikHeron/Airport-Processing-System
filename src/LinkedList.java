@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class LinkedList {
     Node head; // head of list
 
@@ -25,42 +27,28 @@ public class LinkedList {
         System.out.println("Customer with ID# " + data.getId() + " inserted.");
     }
 
-    // Method to delete a Customer from the LinkedList by ID
-    public void removeById(int searchID) {
-        // Store head node
-        Node currentNode = this.head;
-        Node prev = null;
+    // Method to delete 3 to 6 Customers from the LinkedList
+    public void remove() {
+        while (head != null) {
+            // Generate random number from 3 to 6
+            int random = (int) (Math.random() * (4) + 3);
 
-        // If head node itself holds the key to be deleted
-        if (currentNode != null && currentNode.getData().getId() == searchID) {
-            this.head = currentNode.getNextNode(); // Change the head
+            UI.pressEnterToContinue();
+            UI.changeColor(UI.RED);
+            System.out.println("Removing " + random + " customers...\n");
+            UI.sleep();
 
-            System.out.println("Customer with ID# " + searchID + " deleted.");
-            return; // exit the function
+            for (int i = 0; i < random; i++) {
+                // If head is null return
+                if (head != null) {
+                    System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
+                    head = head.getNextNode();
+                } else {
+                    System.out.println();
+                    return;
+                }
+            }
         }
-
-        // the ID is somewhere else in the list so search for it,
-        // keep track of the previous node as it is needed to change currentNode.next
-        while (currentNode != null && !(currentNode.getData().getId() == searchID)) {
-            prev = currentNode;
-            currentNode = currentNode.getNextNode();
-        }
-
-        // If the ID was present, it should be at currentNode
-        // Therefore the currentNode shall not be null
-        if (currentNode != null) {
-            // Since the key is at currentNode
-            // Unlink currentNode from linked list
-            assert prev != null;
-            prev.setNextNode(currentNode.getNextNode());
-            System.out.println("Customer with ID# " + searchID + " deleted.");
-        }
-
-        // If key was not present in linked list
-        if (currentNode == null)
-            System.out.println("Customer with ID# " + searchID + " not found.");
-
-        System.out.println();
     }
 
     // Method to print the LinkedList.

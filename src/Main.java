@@ -17,6 +17,5 @@ public class Main {
         Report.generateReport(customerList); // Generate Report*/
 
         customerList.remove();
-        customerList.print();
     }
 }

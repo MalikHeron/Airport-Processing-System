@@ -25,11 +25,11 @@ public class LinkedList {
         System.out.println("Customer with ID# " + data.getId() + " inserted.");
     }
 
-    // Method to delete 3 to 6 Customers from the LinkedList
+    // Method to delete 3 to 5 Customers from the LinkedList
     public void remove() {
         while (head != null) {
             // Generate random number from 3 to 6
-            int random = (int) (Math.random() * (4) + 3);
+            int random = (int) (Math.random() * (3) + 3);
 
             UI.pressEnterToContinue();
             UI.changeColor(UI.RED);
@@ -42,18 +42,18 @@ public class LinkedList {
                 if (head != null) {
                     System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
                     head = head.getNextNode();
-                } else {
-                    System.out.println();
-                    return;
                 }
             }
+            // Display current list
+            System.out.println();
+            print();
         }
     }
 
     // Method to print the LinkedList.
     public void print() {
         // Check if head is null
-        if (head == null) {
+        if (head == null){
             UI.changeColor(UI.YELLOW);
             System.out.println("There are no customers in the list.");
             UI.resetColor();
@@ -64,6 +64,12 @@ public class LinkedList {
                 UI.changeColor(UI.BLUE);
                 System.out.println("Arrivals at t = " + time);
                 UI.resetColor();
+
+                if (currentNode != null && currentNode.getNextNode() != null
+                        && currentNode.getData().getTime() != time
+                        && currentNode.getNextNode().getData().getTime() != time) {
+                    System.out.println("None");
+                }
 
                 // Traverse the LinkedList
                 while (currentNode != null && currentNode.getData().getTime() == time) {

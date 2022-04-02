@@ -5,7 +5,7 @@ class Node {
     // Primary Constructor
     public Node(Customer data) {
         this.data = data;
-        this.nextNode = null;
+        nextNode = null;
     }
 
     public Customer getData() {

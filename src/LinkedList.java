@@ -8,11 +8,11 @@ public class LinkedList {
 
         // If the Linked List is empty,
         // then make the new node as head
-        if (this.head == null) {
-            this.head = new_node;
+        if (head == null) {
+            head = new_node;
         } else {
             // Else traverse till the last node and insert the new_node there
-            Node last = this.head;
+            Node last = head;
 
             while (last.getNextNode() != null) {
                 last = last.getNextNode();
@@ -35,6 +35,7 @@ public class LinkedList {
             UI.changeColor(UI.RED);
             System.out.println("Removing " + random + " customers...\n");
             UI.sleep();
+            UI.resetColor();
 
             for (int i = 0; i < random; i++) {
                 // If head is null return
@@ -51,20 +52,27 @@ public class LinkedList {
 
     // Method to print the LinkedList.
     public void print() {
-        Node currentNode = this.head;
-
-        for (int time = 0; time <= 2; time++) {
-            UI.changeColor(UI.BLUE);
-            System.out.println("Arrivals at t = " + time);
+        // Check if head is null
+        if (head == null) {
+            UI.changeColor(UI.YELLOW);
+            System.out.println("\nThere are no customers remaining.");
             UI.resetColor();
+        } else {
+            for (int time = 0; time <= 2; time++) {
+                Node currentNode = head;
 
-            // Traverse the LinkedList
-            while (currentNode != null && currentNode.getData().getTime() == time) {
-                System.out.println(currentNode.getData());
-                // Go to next node
-                currentNode = currentNode.getNextNode();
+                UI.changeColor(UI.BLUE);
+                System.out.println("Arrivals at t = " + time);
+                UI.resetColor();
+
+                // Traverse the LinkedList
+                while (currentNode != null && currentNode.getData().getTime() == time) {
+                    System.out.println(currentNode.getData());
+                    // Go to next node
+                    currentNode = currentNode.getNextNode();
+                }
+                System.out.println();
             }
-            System.out.println();
         }
     }
 }

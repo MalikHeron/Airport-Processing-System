@@ -27,7 +27,7 @@ public class LinkedList {
 
     // Method to delete 3 to 6 Customers from the LinkedList
     public void remove() {
-        while (this.head != null) {
+        while (head != null) {
             // Generate random number from 3 to 6
             int random = (int) (Math.random() * (4) + 3);
 
@@ -39,9 +39,9 @@ public class LinkedList {
 
             for (int i = 0; i < random; i++) {
                 // If head is null return
-                if (this.head != null) {
+                if (head != null) {
                     System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
-                    this.head = head.getNextNode();
+                    head = head.getNextNode();
                 } else {
                     System.out.println();
                     return;
@@ -50,33 +50,17 @@ public class LinkedList {
         }
     }
 
-    /* generates a number between 3 and 5 deletes that amount of people from the list
-    public void RemoveRandNum()
-	{
-		Random range = new Random();
-		int number ;
-			number = range.nextInt(3,5);
-		if (head==null)
-		{
-			System.exit(0);
-		}
-		for (int i = 1;i<=number;i++)
-		{
-			Node currentNode=this.head;
-			Node prev=null;
-			this.head=currentNode.getNextNode();
-			System.out.print(i+"/"+number+" deleted ");
-		}
-		System.out.println("\n");
-		print();
-	}*/
-
     // Method to print the LinkedList.
     public void print() {
         // Check if head is null
-            for (int time = 0; time <= 2; time++) {
-                Node currentNode = this.head;
+        if (head == null) {
+            UI.changeColor(UI.YELLOW);
+            System.out.println("There are no customers in the list.");
+            UI.resetColor();
+        } else {
+            Node currentNode = this.head;
 
+            for (int time = 0; time <= 2; time++) {
                 UI.changeColor(UI.BLUE);
                 System.out.println("Arrivals at t = " + time);
                 UI.resetColor();
@@ -89,6 +73,6 @@ public class LinkedList {
                 }
                 System.out.println();
             }
-
+        }
     }
 }

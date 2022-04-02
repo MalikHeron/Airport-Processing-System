@@ -8,11 +8,11 @@ public class LinkedList {
 
         // If the Linked List is empty,
         // then make the new node as head
-        if (head == null) {
-            head = new_node;
+        if (this.head == null) {
+            this.head = new_node;
         } else {
             // Else traverse till the last node and insert the new_node there
-            Node last = head;
+            Node last = this.head;
 
             while (last.getNextNode() != null) {
                 last = last.getNextNode();
@@ -27,7 +27,7 @@ public class LinkedList {
 
     // Method to delete 3 to 6 Customers from the LinkedList
     public void remove() {
-        while (head != null) {
+        while (this.head != null) {
             // Generate random number from 3 to 6
             int random = (int) (Math.random() * (4) + 3);
 
@@ -39,9 +39,9 @@ public class LinkedList {
 
             for (int i = 0; i < random; i++) {
                 // If head is null return
-                if (head != null) {
+                if (this.head != null) {
                     System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
-                    head = head.getNextNode();
+                    this.head = head.getNextNode();
                 } else {
                     System.out.println();
                     return;
@@ -53,13 +53,8 @@ public class LinkedList {
     // Method to print the LinkedList.
     public void print() {
         // Check if head is null
-        if (head == null) {
-            UI.changeColor(UI.YELLOW);
-            System.out.println("\nThere are no customers remaining.");
-            UI.resetColor();
-        } else {
             for (int time = 0; time <= 2; time++) {
-                Node currentNode = head;
+                Node currentNode = this.head;
 
                 UI.changeColor(UI.BLUE);
                 System.out.println("Arrivals at t = " + time);
@@ -73,6 +68,6 @@ public class LinkedList {
                 }
                 System.out.println();
             }
-        }
+
     }
 }

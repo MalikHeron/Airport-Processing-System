@@ -28,7 +28,7 @@ public class LinkedList {
     // Method to delete 3 to 5 Customers from the LinkedList
     public void remove() {
         while (head != null) {
-            // Generate random number from 3 to 6
+            // Generate random number from 3 to 5
             int random = (int) (Math.random() * (3) + 3);
 
             UI.pressEnterToContinue();
@@ -38,7 +38,7 @@ public class LinkedList {
             UI.resetColor();
 
             for (int i = 0; i < random; i++) {
-                // If head is null return
+                // If head is not null remove customer
                 if (head != null) {
                     System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
                     head = head.getNextNode();
@@ -52,7 +52,7 @@ public class LinkedList {
 
     // Method to print the LinkedList.
     public void print() {
-        // Check if head is null
+        // Check if head is null show that list is empty
         if (head == null){
             UI.changeColor(UI.YELLOW);
             System.out.println("There are no customers in the list.");
@@ -65,6 +65,7 @@ public class LinkedList {
                 System.out.println("Arrivals at t = " + time);
                 UI.resetColor();
 
+                // If no customers remain in current time
                 if (currentNode != null && currentNode.getNextNode() != null
                         && currentNode.getData().getTime() != time
                         && currentNode.getNextNode().getData().getTime() != time) {

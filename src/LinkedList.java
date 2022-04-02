@@ -62,6 +62,27 @@ public class LinkedList {
 
         System.out.println();
     }
+    // generates a number between 3 and 5 deletes that amount of people from the list 
+    	public void RemoveRandNum()
+	{
+		Random range = new Random();
+		int number ;
+			number = range.nextInt(3,5);
+		if (head==null)
+		{
+			System.exit(0);
+		}
+		for (int i = 1;i<=number;i++)
+		{
+			Node currentNode=this.head;
+			Node prev=null;
+			this.head=currentNode.getNextNode();
+			System.out.print(i+"/"+number+" deleted ");
+		}
+		System.out.println("\n");
+		print();
+		
+	}
 
     // Method to print the LinkedList.
     public void print() {

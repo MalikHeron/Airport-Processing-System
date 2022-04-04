@@ -21,8 +21,6 @@ public class LinkedList {
             // Insert the new_node at last node
             last.setNextNode(new_node);
         }
-
-        System.out.println("Customer with ID# " + data.getId() + " inserted.");
     }
 
     // Method to delete 3 to 5 Customers from the LinkedList
@@ -40,12 +38,16 @@ public class LinkedList {
             for (int i = 0; i < random; i++) {
                 // If head is not null remove customer
                 if (head != null) {
-                    System.out.println("Customer with ID# " + head.getData().getId() + " removed.");
+                    System.out.println(head.getData() + " removed.");
                     head = head.getNextNode();
                 }
             }
+
             // Display current list
             System.out.println();
+            UI.changeColor(UI.BLUE);
+            System.out.println("Remaining customers: ");
+            UI.resetColor();
             print();
         }
     }
@@ -53,7 +55,7 @@ public class LinkedList {
     // Method to print the LinkedList.
     public void print() {
         // Check if head is null show that list is empty
-        if (head == null){
+        if (head == null) {
             UI.changeColor(UI.YELLOW);
             System.out.println("There are no customers in the list.");
             UI.resetColor();
@@ -61,24 +63,12 @@ public class LinkedList {
             Node currentNode = this.head;
 
             for (int time = 0; time <= 2; time++) {
-                UI.changeColor(UI.BLUE);
-                System.out.println("Arrivals at t = " + time);
-                UI.resetColor();
-
-                // If no customers remain in current time
-                if (currentNode != null && currentNode.getNextNode() != null
-                        && currentNode.getData().getTime() != time
-                        && currentNode.getNextNode().getData().getTime() != time) {
-                    System.out.println("None");
-                }
-
                 // Traverse the LinkedList
-                while (currentNode != null && currentNode.getData().getTime() == time) {
+                while (currentNode != null) {
                     System.out.println(currentNode.getData());
                     // Go to next node
                     currentNode = currentNode.getNextNode();
                 }
-                System.out.println();
             }
         }
     }

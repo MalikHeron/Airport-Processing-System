@@ -97,6 +97,7 @@ public class Generator {
                 customerList.insert(new Customer(generateId(), generateFirstName(), generateLastName(),
                         getGender(), generateFlightNo(), generatePriority(), time));
             }
+            customerList.print();
             System.out.println();
         }
 

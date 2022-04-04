@@ -1,60 +1,30 @@
 public class Sorting {
 
     public static void sortList(LinkedList customerList) {
-        sortByPriority(customerList);
-        sortByTime(customerList);
-    }
-
-    public static void sortByPriority(LinkedList customerList) {
         Node currentNode = customerList.head;
-        Customer customer;
+        LinkedList tempList = new LinkedList(); // temporary list
+        int priority = 1;
 
         if (customerList.head != null) {
-            while (currentNode != null) {
-                // Initialize next node as node after current node
-                Node nextNode = currentNode.getNextNode();
-
-                while (nextNode != null) {
-                    // Check if current and next node are of the same time
-                    if (currentNode.getData().getTime() == nextNode.getData().getTime()) {
-                        // If current node priority is greater than next node priority,
-                        // swap the data between them
-                        if (currentNode.getData().getPriorityNo() > nextNode.getData().getPriorityNo()) {
-                            customer = currentNode.getData();
-                            currentNode.setData(nextNode.getData());
-                            nextNode.setData(customer);
-                        }
+            while (priority <= 2) {
+                // Execute while currentNode is not null
+                while (currentNode != null) {
+                    // If current node priority is equal to priority,
+                    // insert data into temporary list
+                    if (currentNode.getData().getPriorityNo() == priority) {
+                        tempList.insert(currentNode.getData());
                     }
-                    // Change next node
-                    nextNode = nextNode.getNextNode();
+
+                    // Go to next node
+                    currentNode = currentNode.getNextNode();
                 }
-                // Go to next node
-                currentNode = currentNode.getNextNode();
+                // Reset current node
+                currentNode = customerList.head;
+                // Increment priority by 1
+                priority++;
             }
-        }
-    }
-
-    public static void sortByTime(LinkedList customerList) {
-        Node currentNode = customerList.head;
-        Customer customer;
-
-        if (customerList.head != null) {
-            while (currentNode != null) {
-                // Initialize next node as node after current node
-                Node nextNode = currentNode.getNextNode();
-
-                while (nextNode != null) {
-                    //If current node data is greater than next node data,
-                    //swap the data between them
-                    if (currentNode.getData().getTime() > nextNode.getData().getTime()) {
-                        customer = currentNode.getData();
-                        currentNode.setData(nextNode.getData());
-                        nextNode.setData(customer);
-                    }
-                    nextNode = nextNode.getNextNode();
-                }
-                currentNode = currentNode.getNextNode();
-            }
+            // Set customerList as the temporary list
+            customerList.head = tempList.head;
         }
     }
 }

@@ -1,5 +1,5 @@
 class Node {
-    private Customer data;
+    private final Customer data;
     private Node nextNode;
 
     // Primary Constructor
@@ -10,10 +10,6 @@ class Node {
 
     public Customer getData() {
         return data;
-    }
-
-    public void setData(Customer data) {
-        this.data = data;
     }
 
     public Node getNextNode() {

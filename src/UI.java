@@ -21,6 +21,7 @@ public class UI {
         System.out.println("██   ████ ██      ██ ██ ██   ██ ");
         resetColor();
         System.out.println("Flight Arrival Processing System\n");
+        pressEnterToContinue();
         clearScreen();
     }
 

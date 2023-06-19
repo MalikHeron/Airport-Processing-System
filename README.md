@@ -1,2 +1,2 @@
-# Norman_Manley_Airport_Processing_System
+# Norman Manley Airport Processing System
 CMP2006 - Data Structures Project
